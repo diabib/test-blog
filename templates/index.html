@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<legend>LATEST HEADLINES</legend>
+<div class="container">
+    {% for post in data %}
+    <div class="card shadow p-3 mb-5 bg-body rounded">
+      <div class="card-header">{{post.title}}</div>
+      <div class="card-body">
+        <h5 class="card-title">{{post.subtitle}}</h5>
+        <p class="card-text">{{post.body}}</p>
+        <a href="{{url_for('show_post', num=post.id)}}" class="btn btn-primary">Read more</a>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content%}

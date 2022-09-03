@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="card mb-3">
+  <img src="{{data[num-1]['photo']}}" class="card-img-top" alt="photo" style="height:600px;">
+  <div class="card-body">
+    <h5 class="card-title">{{data[num-1]['title']}}</h5>
+    <p class="card-text">{{data[num-1]['body']}}</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+</div>
+{% endblock content %}
+
+
